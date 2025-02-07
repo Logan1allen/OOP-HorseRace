@@ -3,15 +3,16 @@
 
 #include "horse.h"
 
-class race{
+class Race{
     private:
-        const int numHorses;
-        const static int TRACK_LENGTH;
+        static const int numHorses = 5;
+        const static int trackLength = 15;
         Horse horses[numHorses];
 
     public:
         Race();
-        void runRace()
+        void printTrack() const;
+        void runRace();
 
-}
+};
 #endif

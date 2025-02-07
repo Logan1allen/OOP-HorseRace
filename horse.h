@@ -1,9 +1,9 @@
-#ifndef HORSE_H_INCLUDED
-#define HORSE_H_INCLUDED
+#ifndef HORSE_H
+#define HORSE_H
 
-class horse{
+class Horse{
     private:
-        int id;
+        int ID;
         int position;
         int trackLength;
     
@@ -11,7 +11,8 @@ class horse{
         Horse();
         void init(int id, int trackLength);
         void advance();
-        printLane();
-        bool isWinner();
-}
+        void printLane() const;
+        bool isWinner() const;
+        int getPosition() const;
+};
 #endif

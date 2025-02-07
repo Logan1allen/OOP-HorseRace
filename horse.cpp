@@ -2,25 +2,25 @@
 #include <cstdlib>
 #include <iostream>
 
-horse::horse() {
+Horse::Horse() {
     ID = 0;
     trackLength = 0;
     position = 0;
 }
 
-void horse::init(int id, int length) {
+void Horse::init(int id, int length) {
     ID = id;
     trackLength = length;
     position = 0;
 }
 
-void horse::advance() {
+void Horse::advance() {
     if (rand() % 2 == 1) {
         position++;
     }
 }
 
-void horse::printLane() const {
+void Horse::printLane() const {
     for (int i = 0; i < trackLength; i++) {
         if (i == position) {
             std::cout << ID;
@@ -31,10 +31,10 @@ void horse::printLane() const {
     std::cout << std::endl;
 }
 
-bool horse::isWinner() const {
+bool Horse::isWinner() const {
     return position >= trackLength;
 }
 
-int horse::getPosition() const {
+int Horse::getPosition() const {
     return position;
 }
